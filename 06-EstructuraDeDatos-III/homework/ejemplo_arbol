@@ -1,0 +1,33 @@
+function BinarySearchtree(value){
+    this.value = value;
+    this.left = null;
+    this.right = null
+}
+BinarySearchtree.pototype.insert = function(value){
+if (value <= this.value){
+     // anda a la  izquierd
+     if(this.left){
+      // recursion
+      this.left.insert(value)
+     } else {
+        // si no hay nadie
+        this.left = new BinarySearchtree(value)
+        return value
+     }
+}
+else{
+     // anda a l derecha
+     if(this.right){
+        // recursion
+        this.right.insert(value)
+       } else {
+          // si no hay nadie
+          this.right = new BinarySearchtree(value)
+          return value
+       }
+  }
+}
+
+//let newtree = new BinarySearchtree(8)
+//console.log(newtree);
+
